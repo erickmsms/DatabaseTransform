@@ -44,7 +44,26 @@ Cada tabela foi inspecionada e validada conforme as diretrizes de transformaçã
    - Verifiquei cada tabela (employees, dependents, projects, department, dept_locations) para garantir nomes consistentes e tipos corretos (int, varchar, date, double).
 
 3. **Normalização e separação de colunas complexas**
-   - Separei colunas como Address em partes (Rua, Cidade, Estado) para facilitar filtros no Power BI.
+   - Separei colunas como Address em partes (Rua, Cidade, Estado) para facilitar filtros no PowerBI.
+  
+4. **Mescla de Consultas: Employee ↔ Department**
+   - Usei LEFT JOIN (pelo próprio PowerBI) para garantir que todos os empregados aparecessem, mesmo que algum departamento estivesse com inconsistência.
+
+5. **Mescla de Consultas: Employee ↔ Manager**
+   - Criei a relação entre funcionário e seu gerente, através de uma autojunção.
+
+6. **Mescla de Colunas: Criação da coluna FullName**
+   - Mesclei Fname e Lname em uma única coluna, pela própria função dentro do PowerBI.
+
+7. **Agrupamento**
+   - Agrupei os funcionários por gerente para identificar o número de subordinados.
+
+8. **Eliminação de colunas desnecessárias**
+   - Removi colunas auxiliares (como Minit, IDs intermediários, etc.), mantendo apenas as informações relevantes para análise.
+
+9. **Criação dos Dashboards**
+   - Carreguei os dados limpos, e iniciei as análises.
+     
 
 ## 📇 Dashboard Final
 
