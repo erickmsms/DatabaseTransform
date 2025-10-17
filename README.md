@@ -25,6 +25,24 @@ As tabelas originais incluem:
 
 Cada tabela foi inspecionada e validada conforme as diretrizes de transformação.
 
+## 🛠️ O que foi feito?
+
+1. **Extração inicial — juntei Department e Dept_Locations**
+   - Para começar puxei os departamentos já combinados com suas localizações diretamente do banco de dados. Usei a query abaixo (executada no banco `azure_company`):
+  
+   ```sql
+   SELECT CONCAT(d.Dname, ' - ', dl.Dlocation) AS Dname,
+          d.Dnumber,
+          d.Mgr_ssn,
+          d.Mgr_start_date,
+          d.Dept_create_date
+   FROM azure_company.departament d
+   INNER JOIN azure_company.dept_locations dl
+     ON d.Dnumber = dl.Dnumber;
+   ```
+
+
+
 ## 📇 Dashboard Final
 
 <img width="1264" height="700" alt="DB_AnaliseEmpresarial" src="https://github.com/user-attachments/assets/db4e234e-67a2-44c4-9abc-32711fcee360" />
