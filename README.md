@@ -43,10 +43,7 @@ Cada tabela foi inspecionada e validada conforme as diretrizes de transformaçã
 2. **Inspeção de cabeçalhos e tipos**
    - Verifiquei cada tabela (employees, dependents, projects, department, dept_locations) para garantir nomes consistentes e tipos corretos (int, varchar, date, double).
 
-3. **Conversão de valores monetários**
-   - Converti a coluna Salary para tipo DOUBLE PRECISION, garantindo precisão em cálculos futuros
-
-4. **Normalização e separação de colunas complexas**
+3. **Normalização e separação de colunas complexas**
    - Separei colunas como Address em partes (Rua, Cidade, Estado) para facilitar filtros no Power BI.
 
 ## 📇 Dashboard Final
